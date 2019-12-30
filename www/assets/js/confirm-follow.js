@@ -1,13 +1,11 @@
 $(function(){
     $(".confirm-follow").click(function(e){
-        e.preventDefault();
-        
-        var dataNote = $(this).attr("data-note"); 
-        if (!dataNote.lenth){
+        var dataNote = $(this).attr("data-note");
+        if (!dataNote.length){
             dataNote = "Are you sure?";
         }
-        if (confirm(dataNote)){
-            // perform default
+        if (!confirm(dataNote)){
+            e.preventDefault();
         }
     });
 });

@@ -28,6 +28,7 @@ $(function() {
                 var formatedValue = formatterPound.format(numbersOnly);
             }
             $("#exp_amtV").val(formatedValue).removeClass("border-danger");
+            $("#exp_amtV_int").val(numbersOnly);
         } else {
             $("#exp_amtV").val("").addClass("border-danger")
         }
